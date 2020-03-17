@@ -1,0 +1,1998 @@
+import java.sql.*;
+import javax.swing.*;
+import net.proteanit.sql.DbUtils;
+import javax.swing.table.DefaultTableModel;
+public class Booking extends javax.swing.JFrame {
+
+        int S1roundno=1;
+        int S2roundno=1;
+        int S3roundno=1;
+        int S4roundno=1;
+        int S5roundno=1;
+        int S6roundno=1;
+        int S7roundno=1;
+        int S8roundno=1;
+        int S9roundno=1;
+        int S10roundno=1;
+        int S11roundno=1;
+        int S12roundno=1;
+        int S13roundno=1;
+        int S14roundno=1;
+        int S15roundno=1;
+        int S16roundno=1;
+        int S17roundno=1;
+        int S18roundno=1;
+        int S19roundno=1;
+        int S20roundno=1;
+        int S21roundno=1;
+        int S22roundno=1;
+        int S23roundno=1;
+        int S24roundno=1;
+        int S25roundno=1;
+        int S26roundno=1;
+        int S27roundno=1;
+        int S28roundno=1;
+        int S29roundno=1;
+        int S30roundno=1;
+        int S31roundno=1;
+        int S32roundno=1;
+        int S33roundno=1;
+        int S34roundno=1;
+        int S35roundno=1;
+        int S36roundno=1;
+        int S37roundno=1;
+        int S38roundno=1;
+        int S39roundno=1;
+        int S40roundno=1;
+        String date;
+        Object[][] busestabledata =null;
+        String selbus;
+       
+
+    Connection conn=null;
+//    ResultSet rs=null;
+    Statement pst=null;
+    int i = 0, selno=0;
+    Object[][] data =null;
+    
+    public Booking() {
+        initComponents();
+       setSize(720,700);
+
+        conn=javaconnect.ConnecrDb();
+ }@SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        jLabel6 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        TBSeat1 = new javax.swing.JToggleButton();
+        TBSeat2 = new javax.swing.JToggleButton();
+        TBSeat3 = new javax.swing.JToggleButton();
+        TBSeat4 = new javax.swing.JToggleButton();
+        TBSeat5 = new javax.swing.JToggleButton();
+        TBSeat6 = new javax.swing.JToggleButton();
+        TBSeat7 = new javax.swing.JToggleButton();
+        TBSeat9 = new javax.swing.JToggleButton();
+        TBSeat10 = new javax.swing.JToggleButton();
+        TBSeat11 = new javax.swing.JToggleButton();
+        TBSeat12 = new javax.swing.JToggleButton();
+        TBSeat13 = new javax.swing.JToggleButton();
+        TBSeat14 = new javax.swing.JToggleButton();
+        TBSeat15 = new javax.swing.JToggleButton();
+        TBSeat16 = new javax.swing.JToggleButton();
+        TBSeat17 = new javax.swing.JToggleButton();
+        TBSeat21 = new javax.swing.JToggleButton();
+        TBSeat25 = new javax.swing.JToggleButton();
+        TBSeat29 = new javax.swing.JToggleButton();
+        TBSeat33 = new javax.swing.JToggleButton();
+        TBSeat37 = new javax.swing.JToggleButton();
+        TBSeat18 = new javax.swing.JToggleButton();
+        TBSeat22 = new javax.swing.JToggleButton();
+        TBSeat26 = new javax.swing.JToggleButton();
+        TBSeat30 = new javax.swing.JToggleButton();
+        TBSeat34 = new javax.swing.JToggleButton();
+        TBSeat38 = new javax.swing.JToggleButton();
+        TBSeat19 = new javax.swing.JToggleButton();
+        TBSeat20 = new javax.swing.JToggleButton();
+        TBSeat23 = new javax.swing.JToggleButton();
+        TBSeat24 = new javax.swing.JToggleButton();
+        TBSeat27 = new javax.swing.JToggleButton();
+        TBSeat28 = new javax.swing.JToggleButton();
+        TBSeat31 = new javax.swing.JToggleButton();
+        TBSeat32 = new javax.swing.JToggleButton();
+        TBSeat35 = new javax.swing.JToggleButton();
+        TBSeat36 = new javax.swing.JToggleButton();
+        TBSeat39 = new javax.swing.JToggleButton();
+        TBSeat40 = new javax.swing.JToggleButton();
+        TBSeat8 = new javax.swing.JToggleButton();
+        bookBT = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jPanel2 = new javax.swing.JPanel();
+        CBroute = new javax.swing.JComboBox();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        dateDC = new com.toedter.calendar.JDateChooser();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        PassengerDetailsTable = new javax.swing.JTable();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        BusesTable = new javax.swing.JTable();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        AddPassengerButton = new javax.swing.JButton();
+        seatavBT = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
+
+        jLabel6.setFont(new java.awt.Font("Century Gothic", 2, 13));
+        jLabel6.setText("Select your favourite seats:");
+
+        jPanel1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(102, 153, 255)));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        TBSeat1.setText("1");
+        TBSeat1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TBSeat1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TBSeat1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 160, 50, -1));
+
+        TBSeat2.setText("2");
+        TBSeat2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TBSeat2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TBSeat2, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 130, 50, -1));
+
+        TBSeat3.setText("3");
+        TBSeat3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TBSeat3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TBSeat3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 60, 50, -1));
+
+        TBSeat4.setText("4");
+        TBSeat4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TBSeat4ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TBSeat4, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 30, 50, -1));
+
+        TBSeat5.setText("5");
+        TBSeat5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TBSeat5ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TBSeat5, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 160, 50, -1));
+
+        TBSeat6.setText("6");
+        TBSeat6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TBSeat6ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TBSeat6, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 130, 50, -1));
+
+        TBSeat7.setText("7");
+        TBSeat7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TBSeat7ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TBSeat7, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 60, 50, -1));
+
+        TBSeat9.setText("9");
+        TBSeat9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TBSeat9ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TBSeat9, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 160, 50, -1));
+
+        TBSeat10.setText("10");
+        TBSeat10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TBSeat10ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TBSeat10, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 130, -1, -1));
+
+        TBSeat11.setText("11");
+        TBSeat11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TBSeat11ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TBSeat11, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 60, -1, -1));
+
+        TBSeat12.setText("12");
+        TBSeat12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TBSeat12ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TBSeat12, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 30, -1, -1));
+
+        TBSeat13.setText("13");
+        TBSeat13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TBSeat13ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TBSeat13, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 160, -1, -1));
+
+        TBSeat14.setText("14");
+        TBSeat14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TBSeat14ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TBSeat14, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 130, -1, -1));
+
+        TBSeat15.setText("15");
+        TBSeat15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TBSeat15ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TBSeat15, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 60, -1, -1));
+
+        TBSeat16.setText("16");
+        TBSeat16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TBSeat16ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TBSeat16, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 30, -1, -1));
+
+        TBSeat17.setText("17");
+        TBSeat17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TBSeat17ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TBSeat17, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 160, -1, -1));
+
+        TBSeat21.setText("21");
+        TBSeat21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TBSeat21ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TBSeat21, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 160, -1, -1));
+
+        TBSeat25.setText("25");
+        TBSeat25.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TBSeat25ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TBSeat25, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 160, -1, -1));
+
+        TBSeat29.setText("29");
+        TBSeat29.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TBSeat29ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TBSeat29, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, -1, -1));
+
+        TBSeat33.setText("33");
+        TBSeat33.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TBSeat33ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TBSeat33, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, -1, -1));
+
+        TBSeat37.setText("37");
+        TBSeat37.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TBSeat37ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TBSeat37, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, -1, -1));
+
+        TBSeat18.setText("18");
+        TBSeat18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TBSeat18ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TBSeat18, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 130, -1, -1));
+
+        TBSeat22.setText("22");
+        TBSeat22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TBSeat22ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TBSeat22, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 130, -1, -1));
+
+        TBSeat26.setText("26");
+        TBSeat26.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TBSeat26ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TBSeat26, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 130, -1, -1));
+
+        TBSeat30.setText("30");
+        TBSeat30.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TBSeat30ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TBSeat30, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, -1, -1));
+
+        TBSeat34.setText("34");
+        TBSeat34.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TBSeat34ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TBSeat34, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, -1, -1));
+
+        TBSeat38.setText("38");
+        TBSeat38.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TBSeat38ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TBSeat38, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, -1, -1));
+
+        TBSeat19.setText("19");
+        TBSeat19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TBSeat19ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TBSeat19, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 60, -1, -1));
+
+        TBSeat20.setText("20");
+        TBSeat20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TBSeat20ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TBSeat20, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 30, -1, -1));
+
+        TBSeat23.setText("23");
+        TBSeat23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TBSeat23ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TBSeat23, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 60, -1, -1));
+
+        TBSeat24.setText("24");
+        TBSeat24.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TBSeat24ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TBSeat24, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 30, -1, -1));
+
+        TBSeat27.setText("27");
+        TBSeat27.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TBSeat27ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TBSeat27, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, -1, -1));
+
+        TBSeat28.setText("28");
+        TBSeat28.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TBSeat28ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TBSeat28, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 30, -1, -1));
+
+        TBSeat31.setText("31");
+        TBSeat31.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TBSeat31ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TBSeat31, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, -1, -1));
+
+        TBSeat32.setText("32");
+        TBSeat32.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TBSeat32ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TBSeat32, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 30, -1, -1));
+
+        TBSeat35.setText("35");
+        TBSeat35.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TBSeat35ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TBSeat35, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, -1, -1));
+
+        TBSeat36.setText("36");
+        TBSeat36.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TBSeat36ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TBSeat36, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 30, -1, -1));
+
+        TBSeat39.setText("39");
+        TBSeat39.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TBSeat39ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TBSeat39, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
+
+        TBSeat40.setText("40");
+        TBSeat40.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TBSeat40ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TBSeat40, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, -1));
+
+        TBSeat8.setText("8");
+        TBSeat8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TBSeat8ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TBSeat8, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 30, 50, -1));
+
+        bookBT.setFont(new java.awt.Font("Century Gothic", 1, 14));
+        bookBT.setText("BOOK NOW!");
+        bookBT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bookBTActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Century Gothic", 1, 23));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Go ahead! Book your tickets!");
+
+        CBroute.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "select", "Mumbai to Delhi", "Delhi to Kolkata", "Kolkata to Bangalore", "Bangalore to Mumbai", " " }));
+        CBroute.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CBrouteActionPerformed(evt);
+            }
+        });
+
+        jLabel4.setFont(new java.awt.Font("Century Gothic", 2, 13));
+        jLabel4.setText("Enter Passenger Details:");
+
+        jLabel5.setText("Note: Seat Number will be entered automatically.");
+
+        dateDC.setDateFormatString("yyyy-MM-dd");
+
+        PassengerDetailsTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null}
+            },
+            new String [] {
+                "Name", "Seat No."
+            }
+        ));
+        jScrollPane2.setViewportView(PassengerDetailsTable);
+
+        BusesTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"", "", ""},
+                {"", "", ""}
+            },
+            new String [] {
+                "#", "Bus Name", "AC/NON AC"
+            }
+        ));
+        jScrollPane1.setViewportView(BusesTable);
+
+        jLabel3.setFont(new java.awt.Font("Century Gothic", 2, 13));
+        jLabel3.setText("Date:");
+        jLabel3.setMaximumSize(new java.awt.Dimension(480, 300));
+        jLabel3.setMinimumSize(new java.awt.Dimension(436, 317));
+        jLabel3.setPreferredSize(new java.awt.Dimension(436, 317));
+
+        jLabel2.setFont(new java.awt.Font("Century Gothic", 2, 13));
+        jLabel2.setText("Route:");
+
+        AddPassengerButton.setText("Add Passenger");
+        AddPassengerButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AddPassengerButtonActionPerformed(evt);
+            }
+        });
+
+        seatavBT.setText("Check Seat Availability");
+        seatavBT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                seatavBTActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(20, 20, 20)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(dateDC, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(CBroute, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(27, Short.MAX_VALUE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(AddPassengerButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(372, 372, 372))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(seatavBT, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap(326, Short.MAX_VALUE))))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(CBroute, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(dateDC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(53, 53, 53)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(seatavBT)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
+                .addComponent(jLabel4)
+                .addGap(18, 18, 18)
+                .addComponent(AddPassengerButton)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        jScrollPane3.setViewportView(jPanel2);
+
+        jTextField1.setText("jTextField1");
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(170, 170, 170)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(104, 104, 104)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
+                            .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE))))
+                .addContainerGap(14, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(208, 208, 208)
+                .addComponent(bookBT, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(276, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 658, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(31, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(135, 135, 135)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(399, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel1)
+                        .addGap(43, 43, 43)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 478, Short.MAX_VALUE)
+                        .addGap(18, 18, 18))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(106, 106, 106)))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(bookBT, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
+
+    private void CBrouteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CBrouteActionPerformed
+    String route = (String) CBroute.getSelectedItem();
+
+    try{
+       // System.out.println("error step");
+    String sql = "select * from buses where Route='"+route+"';";
+       // System.out.println("");
+   pst = conn.createStatement();
+ResultSet rs=pst.executeQuery(sql);
+   int j=0;
+   int i=0;
+   while(rs.next()==true)
+        {
+            //System.out.println("execute1");
+            j=0;
+            String un=rs.getString("BusNo");
+
+            String ps=rs.getString("BusName");
+               String ps2=rs.getString("AC");
+         BusesTable.setValueAt(un,i,j);
+            j++;
+            BusesTable.setValueAt(ps,i,j);
+            j++;
+            BusesTable.setValueAt(ps2,i,j);
+            i++;
+        //    System.out.println(un+" "+ps);
+        }
+
+
+
+   // .setModel(DbUtils.resultSetToTableModel(rs));
+}
+
+    catch(Exception e){
+    JOptionPane.showMessageDialog(null, e);
+}
+
+// TODO add your handling code here:
+}//GEN-LAST:event_CBrouteActionPerformed
+
+    private void AddPassengerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddPassengerButtonActionPerformed
+
+        
+ String[] columnNames = new String[]{"Name","Seat No."};
+        if(i==0){
+
+data = new Object[1][2];
+data[0][0] = JOptionPane.showInputDialog("Enter Passenger Name");
+data[0][1] = null;
+PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));
+i++;}
+  else{
+    Object[][] temp = new Object[data.length+1][2];
+    for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            temp[j][k]=data[j][k];
+        }
+    }
+    temp[data.length][0]= JOptionPane.showInputDialog("Enter your Name");
+    temp[data.length][1] = null;
+    data = temp;
+    PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));
+    i++;
+
+  }
+
+                   
+// TODO add your handling code here:
+    }//GEN-LAST:event_AddPassengerButtonActionPerformed
+
+    private void TBSeat1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TBSeat1ActionPerformed
+   if(S1roundno%2!=0){
+   String[] columnNames = new String[]{"Name","Seat No."};
+      Object[][] temp = new Object[data.length][2];
+
+    for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(j==selno&&k==1){temp[j][k]=1;}
+            else {temp[j][k]=data[j][k];}
+        }}
+         
+       //temp[selno][1]=1;
+        data = temp;
+    PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));
+      ++selno; S1roundno++;}
+   else
+   {  for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(data[j][k]==(Object)1)//Not being executed! Because data[j][k] is never equal to "1" its equal to 1
+            {data[j][k]="";
+        //jTextField1.setText("Loop Executed"+k);
+            }
+         }}//data[j][k].toString()
+          
+            String[] columnNames = new String[]{"Name","Seat No."};
+             PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));selno--;S1roundno++;
+        }
+
+   // TODO add your handling code here:
+    }//GEN-LAST:event_TBSeat1ActionPerformed
+
+    private void TBSeat2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TBSeat2ActionPerformed
+       if(S2roundno%2!=0){
+   String[] columnNames = new String[]{"Name","Seat No."};
+      Object[][] temp = new Object[data.length][2];
+
+    for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(j==selno&&k==1){temp[j][k]=2;}
+            else {temp[j][k]=data[j][k];}
+        }}
+
+       //temp[selno][1]=1;
+        data = temp;
+    PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));
+      ++selno; S2roundno++;}
+   else
+   {  for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(data[j][k]==(Object)2)//Not being executed! Because data[j][k] is never equal to "1" its equal to 1
+            {data[j][k]="";
+        //jTextField1.setText("Loop Executed"+k);
+            }
+         }}//data[j][k].toString()
+
+            String[] columnNames = new String[]{"Name","Seat No."};
+             PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));selno--;S2roundno++;
+        }
+ // TODO add your handling code here:
+    }//GEN-LAST:event_TBSeat2ActionPerformed
+
+    private void TBSeat3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TBSeat3ActionPerformed
+      if(S3roundno%2!=0){
+   String[] columnNames = new String[]{"Name","Seat No."};
+      Object[][] temp = new Object[data.length][2];
+
+    for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(j==selno&&k==1){temp[j][k]=3;}
+            else {temp[j][k]=data[j][k];}
+        }}
+
+       //temp[selno][1]=1;
+        data = temp;
+    PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));
+      ++selno; S3roundno++;}
+   else
+   {  for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(data[j][k]==(Object)3)//Not being executed! Because data[j][k] is never equal to "1" its equal to 1
+            {data[j][k]="";
+        //jTextField1.setText("Loop Executed"+k);
+            }
+         }}//data[j][k].toString()
+
+            String[] columnNames = new String[]{"Name","Seat No."};
+             PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));selno--;S3roundno++;
+        }
+//TODO add your handling code here:
+    }//GEN-LAST:event_TBSeat3ActionPerformed
+
+    private void TBSeat4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TBSeat4ActionPerformed
+      if(S4roundno%2!=0){
+   String[] columnNames = new String[]{"Name","Seat No."};
+      Object[][] temp = new Object[data.length][2];
+
+    for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(j==selno&&k==1){temp[j][k]=4;}
+            else {temp[j][k]=data[j][k];}
+        }}
+
+       //temp[selno][1]=1;
+        data = temp;
+    PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));
+      ++selno; S4roundno++;}
+   else
+   {  for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(data[j][k]==(Object)4)//Not being executed! Because data[j][k] is never equal to "1" its equal to 1
+            {data[j][k]="";
+        //jTextField1.setText("Loop Executed"+k);
+            }
+         }}//data[j][k].toString()
+
+            String[] columnNames = new String[]{"Name","Seat No."};
+             PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));selno--;S4roundno++;
+        }
+// TODO add your handling code here:
+    }//GEN-LAST:event_TBSeat4ActionPerformed
+
+    private void TBSeat5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TBSeat5ActionPerformed
+      if(S5roundno%2!=0){
+   String[] columnNames = new String[]{"Name","Seat No."};
+      Object[][] temp = new Object[data.length][2];
+
+    for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(j==selno&&k==1){temp[j][k]=5;}
+            else {temp[j][k]=data[j][k];}
+        }}
+
+       //temp[selno][1]=1;
+        data = temp;
+    PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));
+      ++selno; S5roundno++;}
+   else
+   {  for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(data[j][k]==(Object)5)//Not being executed! Because data[j][k] is never equal to "1" its equal to 1
+            {data[j][k]="";
+        }
+         }}//data[j][k].toString()
+
+            String[] columnNames = new String[]{"Name","Seat No."};
+             PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));selno--;S5roundno++;
+        }
+ // TODO add your handling code here:
+    }//GEN-LAST:event_TBSeat5ActionPerformed
+
+    private void TBSeat6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TBSeat6ActionPerformed
+      if(S6roundno%2!=0){
+   String[] columnNames = new String[]{"Name","Seat No."};
+      Object[][] temp = new Object[data.length][2];
+
+    for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(j==selno&&k==1){temp[j][k]=6;}
+            else {temp[j][k]=data[j][k];}
+        }}
+
+       //temp[selno][1]=1;
+        data = temp;
+    PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));
+      ++selno; S6roundno++;}
+   else
+   {  for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(data[j][k]==(Object)6)//Not being executed! Because data[j][k] is never equal to "1" its equal to 1
+            {data[j][k]="";
+        }
+         }}//data[j][k].toString()
+
+            String[] columnNames = new String[]{"Name","Seat No."};
+             PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));selno--;S6roundno++;
+        }
+ // TODO add your handling code here:
+    }//GEN-LAST:event_TBSeat6ActionPerformed
+
+    private void TBSeat7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TBSeat7ActionPerformed
+        if(S7roundno%2!=0){
+   String[] columnNames = new String[]{"Name","Seat No."};
+      Object[][] temp = new Object[data.length][2];
+
+    for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(j==selno&&k==1){temp[j][k]=7;}
+            else {temp[j][k]=data[j][k];}
+        }}
+
+       //temp[selno][1]=1;
+        data = temp;
+    PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));
+      ++selno; S7roundno++;}
+   else
+   {  for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(data[j][k]==(Object)7)//Not being executed! Because data[j][k] is never equal to "1" its equal to 1
+            {data[j][k]="";
+        }
+         }}//data[j][k].toString()
+
+            String[] columnNames = new String[]{"Name","Seat No."};
+             PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));selno--;S7roundno++;
+        }
+// TODO add your handling code here:
+    }//GEN-LAST:event_TBSeat7ActionPerformed
+
+    private void TBSeat8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TBSeat8ActionPerformed
+       if(S8roundno%2!=0){
+   String[] columnNames = new String[]{"Name","Seat No."};
+      Object[][] temp = new Object[data.length][2];
+
+    for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(j==selno&&k==1){temp[j][k]=8;}
+            else {temp[j][k]=data[j][k];}
+        }}
+
+       //temp[selno][1]=1;
+        data = temp;
+    PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));
+      ++selno; S8roundno++;}
+   else
+   {  for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(data[j][k]==(Object)8)//Not being executed! Because data[j][k] is never equal to "1" its equal to 1
+            {data[j][k]="";
+        }
+         }}//data[j][k].toString()
+
+            String[] columnNames = new String[]{"Name","Seat No."};
+             PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));selno--;S8roundno++;
+        }
+// TODO add your handling code here:
+    }//GEN-LAST:event_TBSeat8ActionPerformed
+
+    private void TBSeat9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TBSeat9ActionPerformed
+       if(S9roundno%2!=0){
+   String[] columnNames = new String[]{"Name","Seat No."};
+      Object[][] temp = new Object[data.length][2];
+
+    for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(j==selno&&k==1){temp[j][k]=9;}
+            else {temp[j][k]=data[j][k];}
+        }}
+
+       //temp[selno][1]=1;
+        data = temp;
+    PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));
+      ++selno; S9roundno++;}
+   else
+   {  for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(data[j][k]==(Object)9)//Not being executed! Because data[j][k] is never equal to "1" its equal to 1
+            {data[j][k]="";
+       }
+         }}//data[j][k].toString()
+
+            String[] columnNames = new String[]{"Name","Seat No."};
+             PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));selno--;S9roundno++;
+        }
+// TODO add your handling code here:
+    }//GEN-LAST:event_TBSeat9ActionPerformed
+
+    private void TBSeat10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TBSeat10ActionPerformed
+       if(S10roundno%2!=0){
+   String[] columnNames = new String[]{"Name","Seat No."};
+      Object[][] temp = new Object[data.length][2];
+
+    for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(j==selno&&k==1){temp[j][k]=10;}
+            else {temp[j][k]=data[j][k];}
+        }}
+
+       //temp[selno][1]=1;
+        data = temp;
+    PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));
+      ++selno; S10roundno++;}
+   else
+   {  for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(data[j][k]==(Object)10)//Not being executed! Because data[j][k] is never equal to "1" its equal to 1
+            {data[j][k]="";
+        }
+         }}//data[j][k].toString()
+
+            String[] columnNames = new String[]{"Name","Seat No."};
+             PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));selno--;S10roundno++;
+        }
+// TODO add your handling code here:
+    }//GEN-LAST:event_TBSeat10ActionPerformed
+
+    private void TBSeat11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TBSeat11ActionPerformed
+        if(S11roundno%2!=0){
+   String[] columnNames = new String[]{"Name","Seat No."};
+      Object[][] temp = new Object[data.length][2];
+
+    for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(j==selno&&k==1){temp[j][k]=11;}
+            else {temp[j][k]=data[j][k];}
+        }}
+
+       //temp[selno][1]=1;
+        data = temp;
+    PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));
+      ++selno; S11roundno++;}
+   else
+   {  for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(data[j][k]==(Object)11)//Not being executed! Because data[j][k] is never equal to "1" its equal to 1
+            {data[j][k]="";
+        }
+         }}//data[j][k].toString()
+
+            String[] columnNames = new String[]{"Name","Seat No."};
+             PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));selno--;S11roundno++;
+        }
+// TODO add your handling code here:
+    }//GEN-LAST:event_TBSeat11ActionPerformed
+
+    private void TBSeat12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TBSeat12ActionPerformed
+        if(S12roundno%2!=0){
+   String[] columnNames = new String[]{"Name","Seat No."};
+      Object[][] temp = new Object[data.length][2];
+
+    for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(j==selno&&k==1){temp[j][k]=12;}
+            else {temp[j][k]=data[j][k];}
+        }}
+
+       //temp[selno][1]=1;
+        data = temp;
+    PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));
+      ++selno; S12roundno++;}
+   else
+   {  for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(data[j][k]==(Object)12)//Not being executed! Because data[j][k] is never equal to "1" its equal to 1
+            {data[j][k]="";
+        }
+         }}//data[j][k].toString()
+
+            String[] columnNames = new String[]{"Name","Seat No."};
+             PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));selno--;S12roundno++;
+        }
+// TODO add your handling code here:
+    }//GEN-LAST:event_TBSeat12ActionPerformed
+
+    private void TBSeat13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TBSeat13ActionPerformed
+       if(S13roundno%2!=0){
+   String[] columnNames = new String[]{"Name","Seat No."};
+      Object[][] temp = new Object[data.length][2];
+
+    for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(j==selno&&k==1){temp[j][k]=13;}
+            else {temp[j][k]=data[j][k];}
+        }}
+
+       //temp[selno][1]=1;
+        data = temp;
+    PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));
+      ++selno; S13roundno++;}
+   else
+   {  for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(data[j][k]==(Object)13)//Not being executed! Because data[j][k] is never equal to "1" its equal to 1
+            {data[j][k]="";
+        }
+         }}//data[j][k].toString()
+
+            String[] columnNames = new String[]{"Name","Seat No."};
+             PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));selno--;S13roundno++;
+        }
+// TODO add your handling code here:
+    }//GEN-LAST:event_TBSeat13ActionPerformed
+
+    private void TBSeat14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TBSeat14ActionPerformed
+       if(S14roundno%2!=0){
+   String[] columnNames = new String[]{"Name","Seat No."};
+      Object[][] temp = new Object[data.length][2];
+
+    for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(j==selno&&k==1){temp[j][k]=14;}
+            else {temp[j][k]=data[j][k];}
+        }}
+
+       //temp[selno][1]=1;
+        data = temp;
+    PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));
+      ++selno; S14roundno++;}
+   else
+   {  for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(data[j][k]==(Object)14)//Not being executed! Because data[j][k] is never equal to "1" its equal to 1
+            {data[j][k]="";
+        }
+         }}//data[j][k].toString()
+
+            String[] columnNames = new String[]{"Name","Seat No."};
+             PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));selno--;S14roundno++;
+        }
+// TODO add your handling code here:
+    }//GEN-LAST:event_TBSeat14ActionPerformed
+
+    private void TBSeat15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TBSeat15ActionPerformed
+        if(S15roundno%2!=0){
+   String[] columnNames = new String[]{"Name","Seat No."};
+      Object[][] temp = new Object[data.length][2];
+
+    for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(j==selno&&k==1){temp[j][k]=15;}
+            else {temp[j][k]=data[j][k];}
+        }}
+
+       //temp[selno][1]=1;
+        data = temp;
+    PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));
+      ++selno; S15roundno++;}
+   else
+   {  for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(data[j][k]==(Object)15)//Not being executed! Because data[j][k] is never equal to "1" its equal to 1
+            {data[j][k]="";
+        }
+         }}//data[j][k].toString()
+
+            String[] columnNames = new String[]{"Name","Seat No."};
+             PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));selno--;S15roundno++;
+        }
+// TODO add your handling code here:
+    }//GEN-LAST:event_TBSeat15ActionPerformed
+
+    private void TBSeat16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TBSeat16ActionPerformed
+         if(S16roundno%2!=0){
+   String[] columnNames = new String[]{"Name","Seat No."};
+      Object[][] temp = new Object[data.length][2];
+
+    for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(j==selno&&k==1){temp[j][k]=16;}
+            else {temp[j][k]=data[j][k];}
+        }}
+
+       //temp[selno][1]=1;
+        data = temp;
+    PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));
+      ++selno; S16roundno++;}
+   else
+   {  for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(data[j][k]==(Object)16)//Not being executed! Because data[j][k] is never equal to "1" its equal to 1
+            {data[j][k]="";
+        }
+         }}//data[j][k].toString()
+
+            String[] columnNames = new String[]{"Name","Seat No."};
+             PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));selno--;S16roundno++;
+        }
+// TODO add your handling code here:
+    }//GEN-LAST:event_TBSeat16ActionPerformed
+
+    private void TBSeat17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TBSeat17ActionPerformed
+        if(S17roundno%2!=0){
+   String[] columnNames = new String[]{"Name","Seat No."};
+      Object[][] temp = new Object[data.length][2];
+
+    for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(j==selno&&k==1){temp[j][k]=17;}
+            else {temp[j][k]=data[j][k];}
+        }}
+
+       //temp[selno][1]=1;
+        data = temp;
+    PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));
+      ++selno; S1roundno++;}
+   else
+   {  for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(data[j][k]==(Object)17)//Not being executed! Because data[j][k] is never equal to "1" its equal to 1
+            {data[j][k]="";
+        }
+         }}//data[j][k].toString()
+
+            String[] columnNames = new String[]{"Name","Seat No."};
+             PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));selno--;S17roundno++;
+        }
+// TODO add your handling code here:
+    }//GEN-LAST:event_TBSeat17ActionPerformed
+
+    private void TBSeat18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TBSeat18ActionPerformed
+        if(S18roundno%2!=0){
+   String[] columnNames = new String[]{"Name","Seat No."};
+      Object[][] temp = new Object[data.length][2];
+
+    for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(j==selno&&k==1){temp[j][k]=18;}
+            else {temp[j][k]=data[j][k];}
+        }}
+
+       //temp[selno][1]=1;
+        data = temp;
+    PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));
+      ++selno; S18roundno++;}
+   else
+   {  for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(data[j][k]==(Object)18)//Not being executed! Because data[j][k] is never equal to "1" its equal to 1
+            {data[j][k]="";
+        }
+         }}//data[j][k].toString()
+
+            String[] columnNames = new String[]{"Name","Seat No."};
+             PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));selno--;S18roundno++;
+        }
+// TODO add your handling code here:
+    }//GEN-LAST:event_TBSeat18ActionPerformed
+
+    private void TBSeat19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TBSeat19ActionPerformed
+       if(S19roundno%2!=0){
+   String[] columnNames = new String[]{"Name","Seat No."};
+      Object[][] temp = new Object[data.length][2];
+
+    for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(j==selno&&k==1){temp[j][k]=19;}
+            else {temp[j][k]=data[j][k];}
+        }}
+
+       //temp[selno][1]=1;
+        data = temp;
+    PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));
+      ++selno; S19roundno++;}
+   else
+   {  for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(data[j][k]==(Object)19)//Not being executed! Because data[j][k] is never equal to "1" its equal to 1
+            {data[j][k]="";
+        }
+         }}//data[j][k].toString()
+
+            String[] columnNames = new String[]{"Name","Seat No."};
+             PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));selno--;S19roundno++;
+        }
+// TODO add your handling code here:
+    }//GEN-LAST:event_TBSeat19ActionPerformed
+
+    private void TBSeat20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TBSeat20ActionPerformed
+        if(S20roundno%2!=0){
+   String[] columnNames = new String[]{"Name","Seat No."};
+      Object[][] temp = new Object[data.length][2];
+
+    for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(j==selno&&k==1){temp[j][k]=20;}
+            else {temp[j][k]=data[j][k];}
+        }}
+
+       //temp[selno][1]=1;
+        data = temp;
+    PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));
+      ++selno; S20roundno++;}
+   else
+   {  for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(data[j][k]==(Object)20)//Not being executed! Because data[j][k] is never equal to "1" its equal to 1
+            {data[j][k]="";
+       }
+         }}//data[j][k].toString()
+
+            String[] columnNames = new String[]{"Name","Seat No."};
+             PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));selno--;S20roundno++;
+        }
+// TODO add your handling code here:
+    }//GEN-LAST:event_TBSeat20ActionPerformed
+
+    private void TBSeat21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TBSeat21ActionPerformed
+       if(S21roundno%2!=0){
+   String[] columnNames = new String[]{"Name","Seat No."};
+      Object[][] temp = new Object[data.length][2];
+
+    for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(j==selno&&k==1){temp[j][k]=21;}
+            else {temp[j][k]=data[j][k];}
+        }}
+
+       //temp[selno][1]=1;
+        data = temp;
+    PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));
+      ++selno; S21roundno++;}
+   else
+   {  for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(data[j][k]==(Object)21)//Not being executed! Because data[j][k] is never equal to "1" its equal to 1
+            {data[j][k]="";
+        }
+         }}//data[j][k].toString()
+
+            String[] columnNames = new String[]{"Name","Seat No."};
+             PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));selno--;S21roundno++;
+        }
+// TODO add your handling code here:
+    }//GEN-LAST:event_TBSeat21ActionPerformed
+
+    private void TBSeat22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TBSeat22ActionPerformed
+         if(S22roundno%2!=0){
+   String[] columnNames = new String[]{"Name","Seat No."};
+      Object[][] temp = new Object[data.length][2];
+
+    for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(j==selno&&k==1){temp[j][k]=22;}
+            else {temp[j][k]=data[j][k];}
+        }}
+
+       //temp[selno][1]=1;
+        data = temp;
+    PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));
+      ++selno; S22roundno++;}
+   else
+   {  for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(data[j][k]==(Object)22)//Not being executed! Because data[j][k] is never equal to "1" its equal to 1
+            {data[j][k]="";
+        }
+         }}//data[j][k].toString()
+
+            String[] columnNames = new String[]{"Name","Seat No."};
+             PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));selno--;S22roundno++;
+        }
+// TODO add your handling code here:
+    }//GEN-LAST:event_TBSeat22ActionPerformed
+
+    private void TBSeat23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TBSeat23ActionPerformed
+        if(S23roundno%2!=0){
+   String[] columnNames = new String[]{"Name","Seat No."};
+      Object[][] temp = new Object[data.length][2];
+
+    for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(j==selno&&k==1){temp[j][k]=23;}
+            else {temp[j][k]=data[j][k];}
+        }}
+
+       //temp[selno][1]=1;
+        data = temp;
+    PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));
+      ++selno; S23roundno++;}
+   else
+   {  for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(data[j][k]==(Object)23)//Not being executed! Because data[j][k] is never equal to "1" its equal to 1
+            {data[j][k]="";
+        }
+         }}//data[j][k].toString()
+
+            String[] columnNames = new String[]{"Name","Seat No."};
+             PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));selno--;S23roundno++;
+        }
+// TODO add your handling code here:
+    }//GEN-LAST:event_TBSeat23ActionPerformed
+
+    private void TBSeat24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TBSeat24ActionPerformed
+        if(S24roundno%2!=0){
+   String[] columnNames = new String[]{"Name","Seat No."};
+      Object[][] temp = new Object[data.length][2];
+
+    for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(j==selno&&k==1){temp[j][k]=24;}
+            else {temp[j][k]=data[j][k];}
+        }}
+
+       //temp[selno][1]=1;
+        data = temp;
+    PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));
+      ++selno; S24roundno++;}
+   else
+   {  for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(data[j][k]==(Object)24)//Not being executed! Because data[j][k] is never equal to "1" its equal to 1
+            {data[j][k]="";
+        }
+         }}//data[j][k].toString()
+
+            String[] columnNames = new String[]{"Name","Seat No."};
+             PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));selno--;S24roundno++;
+        }
+ // TODO add your handling code here:
+    }//GEN-LAST:event_TBSeat24ActionPerformed
+
+    private void TBSeat25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TBSeat25ActionPerformed
+        if(S25roundno%2!=0){
+   String[] columnNames = new String[]{"Name","Seat No."};
+      Object[][] temp = new Object[data.length][2];
+
+    for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(j==selno&&k==1){temp[j][k]=25;}
+            else {temp[j][k]=data[j][k];}
+        }}
+
+       //temp[selno][1]=1;
+        data = temp;
+    PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));
+      ++selno; S25roundno++;}
+   else
+   {  for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(data[j][k]==(Object)25)//Not being executed! Because data[j][k] is never equal to "1" its equal to 1
+            {data[j][k]="";
+        }
+         }}//data[j][k].toString()
+
+            String[] columnNames = new String[]{"Name","Seat No."};
+             PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));selno--;S25roundno++;
+        }
+ // TODO add your handling code here:
+    }//GEN-LAST:event_TBSeat25ActionPerformed
+
+    private void TBSeat26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TBSeat26ActionPerformed
+         if(S26roundno%2!=0){
+   String[] columnNames = new String[]{"Name","Seat No."};
+      Object[][] temp = new Object[data.length][2];
+
+    for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(j==selno&&k==1){temp[j][k]=26;}
+            else {temp[j][k]=data[j][k];}
+        }}
+
+       //temp[selno][1]=1;
+        data = temp;
+    PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));
+      ++selno; S26roundno++;}
+   else
+   {  for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(data[j][k]==(Object)26)//Not being executed! Because data[j][k] is never equal to "1" its equal to 1
+            {data[j][k]="";
+        }
+         }}//data[j][k].toString()
+
+            String[] columnNames = new String[]{"Name","Seat No."};
+             PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));selno--;S26roundno++;
+        }
+// TODO add your handling code here:
+    }//GEN-LAST:event_TBSeat26ActionPerformed
+
+    private void TBSeat27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TBSeat27ActionPerformed
+         if(S27roundno%2!=0){
+   String[] columnNames = new String[]{"Name","Seat No."};
+      Object[][] temp = new Object[data.length][2];
+
+    for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(j==selno&&k==1){temp[j][k]=27;}
+            else {temp[j][k]=data[j][k];}
+        }}
+
+       //temp[selno][1]=1;
+        data = temp;
+    PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));
+      ++selno; S27roundno++;}
+   else
+   {  for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(data[j][k]==(Object)27)//Not being executed! Because data[j][k] is never equal to "1" its equal to 1
+            {data[j][k]="";
+        }
+         }}//data[j][k].toString()
+
+            String[] columnNames = new String[]{"Name","Seat No."};
+             PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));selno--;S27roundno++;
+        }
+// TODO add your handling code here:
+    }//GEN-LAST:event_TBSeat27ActionPerformed
+
+    private void TBSeat28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TBSeat28ActionPerformed
+        if(S28roundno%2!=0){
+   String[] columnNames = new String[]{"Name","Seat No."};
+      Object[][] temp = new Object[data.length][2];
+
+    for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(j==selno&&k==1){temp[j][k]=28;}
+            else {temp[j][k]=data[j][k];}
+        }}
+
+       //temp[selno][1]=1;
+        data = temp;
+    PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));
+      ++selno; S28roundno++;}
+   else
+   {  for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(data[j][k]==(Object)28)//Not being executed! Because data[j][k] is never equal to "1" its equal to 1
+            {data[j][k]="";
+       }
+         }}//data[j][k].toString()
+
+            String[] columnNames = new String[]{"Name","Seat No."};
+             PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));selno--;S28roundno++;
+        }
+ // TODO add your handling code here:
+    }//GEN-LAST:event_TBSeat28ActionPerformed
+
+    private void TBSeat29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TBSeat29ActionPerformed
+         if(S29roundno%2!=0){
+   String[] columnNames = new String[]{"Name","Seat No."};
+      Object[][] temp = new Object[data.length][2];
+
+    for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(j==selno&&k==1){temp[j][k]=29;}
+            else {temp[j][k]=data[j][k];}
+        }}
+
+       //temp[selno][1]=1;
+        data = temp;
+    PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));
+      ++selno; S29roundno++;}
+   else
+   {  for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(data[j][k]==(Object)29)//Not being executed! Because data[j][k] is never equal to "1" its equal to 1
+            {data[j][k]="";
+       }
+         }}//data[j][k].toString()
+
+            String[] columnNames = new String[]{"Name","Seat No."};
+             PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));selno--;S29roundno++;
+        }
+ // TODO add your handling code here:
+    }//GEN-LAST:event_TBSeat29ActionPerformed
+
+    private void TBSeat30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TBSeat30ActionPerformed
+         if(S30roundno%2!=0){
+   String[] columnNames = new String[]{"Name","Seat No."};
+      Object[][] temp = new Object[data.length][2];
+
+    for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(j==selno&&k==1){temp[j][k]=30;}
+            else {temp[j][k]=data[j][k];}
+        }}
+
+       //temp[selno][1]=1;
+        data = temp;
+    PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));
+      ++selno; S30roundno++;}
+   else
+   {  for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(data[j][k]==(Object)30)//Not being executed! Because data[j][k] is never equal to "1" its equal to 1
+            {data[j][k]="";
+       }
+         }}//data[j][k].toString()
+
+            String[] columnNames = new String[]{"Name","Seat No."};
+             PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));selno--;S30roundno++;
+        }
+ // TODO add your handling code here:
+    }//GEN-LAST:event_TBSeat30ActionPerformed
+
+    private void TBSeat31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TBSeat31ActionPerformed
+         if(S31roundno%2!=0){
+   String[] columnNames = new String[]{"Name","Seat No."};
+      Object[][] temp = new Object[data.length][2];
+
+    for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(j==selno&&k==1){temp[j][k]=31;}
+            else {temp[j][k]=data[j][k];}
+        }}
+
+       //temp[selno][1]=1;
+        data = temp;
+    PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));
+      ++selno; S31roundno++;}
+   else
+   {  for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(data[j][k]==(Object)31)//Not being executed! Because data[j][k] is never equal to "1" its equal to 1
+            {data[j][k]="";
+        }
+         }}//data[j][k].toString()
+
+            String[] columnNames = new String[]{"Name","Seat No."};
+             PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));selno--;S31roundno++;
+        }
+// TODO add your handling code here:
+    }//GEN-LAST:event_TBSeat31ActionPerformed
+
+    private void TBSeat32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TBSeat32ActionPerformed
+         if(S32roundno%2!=0){
+   String[] columnNames = new String[]{"Name","Seat No."};
+      Object[][] temp = new Object[data.length][2];
+
+    for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(j==selno&&k==1){temp[j][k]=32;}
+            else {temp[j][k]=data[j][k];}
+        }}
+
+       //temp[selno][1]=1;
+        data = temp;
+    PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));
+      ++selno; S32roundno++;}
+   else
+   {  for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(data[j][k]==(Object)32)//Not being executed! Because data[j][k] is never equal to "1" its equal to 1
+            {data[j][k]="";
+        }
+         }}//data[j][k].toString()
+
+            String[] columnNames = new String[]{"Name","Seat No."};
+             PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));selno--;S32roundno++;
+        }
+ // TODO add your handling code here:
+    }//GEN-LAST:event_TBSeat32ActionPerformed
+
+    private void TBSeat33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TBSeat33ActionPerformed
+         if(S33roundno%2!=0){
+   String[] columnNames = new String[]{"Name","Seat No."};
+      Object[][] temp = new Object[data.length][2];
+
+    for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(j==selno&&k==1){temp[j][k]=33;}
+            else {temp[j][k]=data[j][k];}
+        }}
+
+       //temp[selno][1]=1;
+        data = temp;
+    PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));
+      ++selno; S33roundno++;}
+   else
+   {  for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(data[j][k]==(Object)33)//Not being executed! Because data[j][k] is never equal to "1" its equal to 1
+            {data[j][k]="";
+        }
+         }}//data[j][k].toString()
+
+            String[] columnNames = new String[]{"Name","Seat No."};
+             PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));selno--;S33roundno++;
+        }
+ // TODO add your handling code here:
+    }//GEN-LAST:event_TBSeat33ActionPerformed
+
+    private void TBSeat34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TBSeat34ActionPerformed
+         if(S34roundno%2!=0){
+   String[] columnNames = new String[]{"Name","Seat No."};
+      Object[][] temp = new Object[data.length][2];
+
+    for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(j==selno&&k==1){temp[j][k]=34;}
+            else {temp[j][k]=data[j][k];}
+        }}
+
+       //temp[selno][1]=1;
+        data = temp;
+    PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));
+      ++selno; S34roundno++;}
+   else
+   {  for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(data[j][k]==(Object)34)//Not being executed! Because data[j][k] is never equal to "1" its equal to 1
+            {data[j][k]="";
+        }
+         }}//data[j][k].toString()
+
+            String[] columnNames = new String[]{"Name","Seat No."};
+             PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));selno--;S34roundno++;
+        }
+// TODO add your handling code here:
+    }//GEN-LAST:event_TBSeat34ActionPerformed
+
+    private void TBSeat35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TBSeat35ActionPerformed
+        if(S35roundno%2!=0){
+   String[] columnNames = new String[]{"Name","Seat No."};
+      Object[][] temp = new Object[data.length][2];
+
+    for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(j==selno&&k==1){temp[j][k]=35;}
+            else {temp[j][k]=data[j][k];}
+        }}
+
+       //temp[selno][1]=1;
+        data = temp;
+    PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));
+      ++selno; S35roundno++;}
+   else
+   {  for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(data[j][k]==(Object)35)//Not being executed! Because data[j][k] is never equal to "1" its equal to 1
+            {data[j][k]="";
+        }
+         }}//data[j][k].toString()
+
+            String[] columnNames = new String[]{"Name","Seat No."};
+             PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));selno--;S35roundno++;
+        }
+ // TODO add your handling code here:
+    }//GEN-LAST:event_TBSeat35ActionPerformed
+
+    private void TBSeat36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TBSeat36ActionPerformed
+         if(S36roundno%2!=0){
+   String[] columnNames = new String[]{"Name","Seat No."};
+      Object[][] temp = new Object[data.length][2];
+
+    for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(j==selno&&k==1){temp[j][k]=36;}
+            else {temp[j][k]=data[j][k];}
+        }}
+
+       //temp[selno][1]=1;
+        data = temp;
+    PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));
+      ++selno; S36roundno++;}
+   else
+   {  for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(data[j][k]==(Object)36)//Not being executed! Because data[j][k] is never equal to "1" its equal to 1
+            {data[j][k]="";
+        }
+         }}//data[j][k].toString()
+
+            String[] columnNames = new String[]{"Name","Seat No."};
+             PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));selno--;S36roundno++;
+        }
+ // TODO add your handling code here:
+    }//GEN-LAST:event_TBSeat36ActionPerformed
+
+    private void TBSeat37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TBSeat37ActionPerformed
+         if(S37roundno%2!=0){
+   String[] columnNames = new String[]{"Name","Seat No."};
+      Object[][] temp = new Object[data.length][2];
+
+    for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(j==selno&&k==1){temp[j][k]=37;}
+            else {temp[j][k]=data[j][k];}
+        }}
+
+       //temp[selno][1]=1;
+        data = temp;
+    PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));
+      ++selno; S37roundno++;}
+   else
+   {  for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(data[j][k]==(Object)37)//Not being executed! Because data[j][k] is never equal to "1" its equal to 1
+            {data[j][k]="";
+        }
+         }}//data[j][k].toString()
+
+            String[] columnNames = new String[]{"Name","Seat No."};
+             PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));selno--;S37roundno++;
+        }
+ // TODO add your handling code here:
+    }//GEN-LAST:event_TBSeat37ActionPerformed
+
+    private void TBSeat38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TBSeat38ActionPerformed
+          if(S38roundno%2!=0){
+   String[] columnNames = new String[]{"Name","Seat No."};
+      Object[][] temp = new Object[data.length][2];
+
+    for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(j==selno&&k==1){temp[j][k]=38;}
+            else {temp[j][k]=data[j][k];}
+        }}
+
+       //temp[selno][1]=1;
+        data = temp;
+    PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));
+      ++selno; S38roundno++;}
+   else
+   {  for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(data[j][k]==(Object)38)//Not being executed! Because data[j][k] is never equal to "1" its equal to 1
+            {data[j][k]="";
+        }
+         }}//data[j][k].toString()
+
+            String[] columnNames = new String[]{"Name","Seat No."};
+             PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));selno--;S38roundno++;
+        }
+ // TODO add your handling code here:
+    }//GEN-LAST:event_TBSeat38ActionPerformed
+
+    private void TBSeat39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TBSeat39ActionPerformed
+          if(S39roundno%2!=0){
+   String[] columnNames = new String[]{"Name","Seat No."};
+      Object[][] temp = new Object[data.length][2];
+
+    for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(j==selno&&k==1){temp[j][k]=39;}
+            else {temp[j][k]=data[j][k];}
+        }}
+
+       //temp[selno][1]=1;
+        data = temp;
+    PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));
+      ++selno; S39roundno++;}
+   else
+   {  for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(data[j][k]==(Object)39)//Not being executed! Because data[j][k] is never equal to "1" its equal to 1
+            {data[j][k]="";
+        }
+         }}//data[j][k].toString()
+
+            String[] columnNames = new String[]{"Name","Seat No."};
+             PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));selno--;S39roundno++;
+        }
+// TODO add your handling code here:
+    }//GEN-LAST:event_TBSeat39ActionPerformed
+
+    private void TBSeat40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TBSeat40ActionPerformed
+         if(S40roundno%2!=0){
+   String[] columnNames = new String[]{"Name","Seat No."};
+      Object[][] temp = new Object[data.length][2];
+
+    for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(j==selno&&k==1){temp[j][k]=40;}
+            else {temp[j][k]=data[j][k];}
+        }}
+
+       //temp[selno][1]=1;
+        data = temp;
+    PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));
+      ++selno; S40roundno++;}
+   else
+   {  for(int j=0;j<data.length;j++){
+        for(int k=0;k<2;k++){
+            if(data[j][k]==(Object)40)//Not being executed! Because data[j][k] is never equal to "1" its equal to 1
+            {data[j][k]="";
+        }
+         }}//data[j][k].toString()
+
+            String[] columnNames = new String[]{"Name","Seat No."};
+             PassengerDetailsTable.setModel(new DefaultTableModel(data,columnNames));selno--;S40roundno++;
+        }
+// TODO add your handling code here:
+    }//GEN-LAST:event_TBSeat40ActionPerformed
+
+    private void seatavBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seatavBTActionPerformed
+ date = ((JTextField)dateDC.getDateEditor().getUiComponent()).getText();
+ selbus = (String) BusesTable.getValueAt(BusesTable.getSelectedRow(), 0);
+
+       // java.util.Date d = dateDC.getDate();<-- storing date in Date format
+    }//GEN-LAST:event_seatavBTActionPerformed
+
+    private void bookBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bookBTActionPerformed
+date = ((JTextField)dateDC.getDateEditor().getUiComponent()).getText();
+selbus = (String) BusesTable.getValueAt(BusesTable.getSelectedRow(), 0);
+//I want to put in the table corresponding to 'selbus' the elements in passengerdetailstable + the date
+for(int r=0; r<PassengerDetailsTable.getRowCount();r++)
+
+{
+
+       // System.out.println("");
+  try{
+      String sql = "insert into "+selbus+" values('"+
+                    data[r][0]+"','"+data[r][1]+"','"+date+")";
+      pst = conn.createStatement();
+  ResultSet rs=pst.executeQuery(sql);
+  }
+
+  catch(Exception e){
+    JOptionPane.showMessageDialog(null, e);
+  }
+JOptionPane.showMessageDialog(null, "Success");}
+
+             
+             
+
+
+
+
+        /*for(int r=0; r<BusesTable.getRowCount();r++)
+{for(int c=0;c<BusesTable.getColumnCount();c++)
+ {busestabledata[r][c] = BusesTable.getValueAt(r, c);}}*/// TODO add your handling code here:
+}//GEN-LAST:event_bookBTActionPerformed
+
+    /**
+    * @param args the command line arguments
+    */
+    public static void main(String args[]) {
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Booking().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton AddPassengerButton;
+    private javax.swing.JTable BusesTable;
+    private javax.swing.JComboBox CBroute;
+    private javax.swing.JTable PassengerDetailsTable;
+    private javax.swing.JToggleButton TBSeat1;
+    private javax.swing.JToggleButton TBSeat10;
+    private javax.swing.JToggleButton TBSeat11;
+    private javax.swing.JToggleButton TBSeat12;
+    private javax.swing.JToggleButton TBSeat13;
+    private javax.swing.JToggleButton TBSeat14;
+    private javax.swing.JToggleButton TBSeat15;
+    private javax.swing.JToggleButton TBSeat16;
+    private javax.swing.JToggleButton TBSeat17;
+    private javax.swing.JToggleButton TBSeat18;
+    private javax.swing.JToggleButton TBSeat19;
+    private javax.swing.JToggleButton TBSeat2;
+    private javax.swing.JToggleButton TBSeat20;
+    private javax.swing.JToggleButton TBSeat21;
+    private javax.swing.JToggleButton TBSeat22;
+    private javax.swing.JToggleButton TBSeat23;
+    private javax.swing.JToggleButton TBSeat24;
+    private javax.swing.JToggleButton TBSeat25;
+    private javax.swing.JToggleButton TBSeat26;
+    private javax.swing.JToggleButton TBSeat27;
+    private javax.swing.JToggleButton TBSeat28;
+    private javax.swing.JToggleButton TBSeat29;
+    private javax.swing.JToggleButton TBSeat3;
+    private javax.swing.JToggleButton TBSeat30;
+    private javax.swing.JToggleButton TBSeat31;
+    private javax.swing.JToggleButton TBSeat32;
+    private javax.swing.JToggleButton TBSeat33;
+    private javax.swing.JToggleButton TBSeat34;
+    private javax.swing.JToggleButton TBSeat35;
+    private javax.swing.JToggleButton TBSeat36;
+    private javax.swing.JToggleButton TBSeat37;
+    private javax.swing.JToggleButton TBSeat38;
+    private javax.swing.JToggleButton TBSeat39;
+    private javax.swing.JToggleButton TBSeat4;
+    private javax.swing.JToggleButton TBSeat40;
+    private javax.swing.JToggleButton TBSeat5;
+    private javax.swing.JToggleButton TBSeat6;
+    private javax.swing.JToggleButton TBSeat7;
+    private javax.swing.JToggleButton TBSeat8;
+    private javax.swing.JToggleButton TBSeat9;
+    private javax.swing.JButton bookBT;
+    private com.toedter.calendar.JDateChooser dateDC;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JButton seatavBT;
+    // End of variables declaration//GEN-END:variables
+
+}
+
